@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"ticketbook/db"
+	"ticketbook/config"
 	"ticketbook/routers"
 )
 
 func main() {
 	fmt.Println(" ticket booking app ")
-	db.DBConnect()
+	config.DBConnect()
 	routers.Router()
 
 }

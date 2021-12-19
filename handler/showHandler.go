@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"ticketbook/db"
+	"ticketbook/config"
 	"ticketbook/models"
 	"time"
 )
@@ -21,7 +21,7 @@ func CreateNewShow(w http.ResponseWriter, r *http.Request) {
 	}
 	ctx, cancel := context.WithTimeout(context.TODO(), 5*time.Second)
 	defer cancel()
-	res, er := db.DB.Collection("shows").InsertOne(ctx, f)
+	res, er := config.DB.Collection("shows").InsertOne(ctx, f)
 	if er != nil {
 		fmt.Println(er)
 	}

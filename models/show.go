@@ -3,7 +3,7 @@ package models
 import "go.mongodb.org/mongo-driver/bson/primitive"
 
 type Show struct {
-	id          primitive.ObjectID `bson:"_id" omitempty`
+	ID          primitive.ObjectID `bson:"_id" omitempty json:"_id"`
 	Time        string             `bson:"title" json:"title"`
 	Title       string             `bson:"title" json:"title"`
 	Pricing     int                `bson:"pricing" json:"pricing"`
