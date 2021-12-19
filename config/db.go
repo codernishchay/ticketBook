@@ -15,7 +15,7 @@ var DB *mongo.Database
 
 func DBConnect() {
 	clientOptions := options.Client().
-		ApplyURI("mongodb+srv://nishi:2su3cR3MXunGRzAM@cluster0.zjfve.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+		ApplyURI("mongodb+srv://nishi:2su3cR3MXu@cluster0.zjfve.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 	client, err := mongo.Connect(ctx, clientOptions)
