@@ -11,7 +11,7 @@ import (
 var SeatCheck []models.Seat
 
 // CheckAvilability will return number of seats
-func CheckAvilability(ticket models.Booking) []models.Seat {
+func GetSeats(ticket models.Booking) []models.Seat {
 	ctx, cancel := context.WithCancel(context.TODO())
 	defer cancel()
 	showID := ticket.ShowID
